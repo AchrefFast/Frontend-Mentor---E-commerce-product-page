@@ -31,8 +31,9 @@ const MainHeader = () => {
                             fillRule="nonzero"
                         />
                     </svg>
+                    <span className={classes['sr-only']}>cart</span>
 
-                    <div className={`${classes.amount} ${amount === 0 ? classes.hide : ''}`} aria-live='polite'>{amount}</div>
+                    <span className={`${classes.amount} ${amount === 0 ? classes.hide : ''}`} aria-live='polite'>{amount}</span>
                 </button>
                 <button className={classes.profile}>
                     <img src={profile} alt="My profile" />
