@@ -1,0 +1,160 @@
+@use "../../../sass/abstract/index" as *;
+
+.overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+  z-index: 200;
+}
+
+.gallery {
+  position: relative;
+  z-index: 1;
+  width: 600px;
+  margin: auto;
+  //   overflow: hidden;
+
+  img {
+    width: 552px;
+    border-radius: 20px;
+  }
+
+  .right-arrow,
+  .left-arrow {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.351);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    border: none;
+    border-radius: 50%;
+    background: color(nt-white);
+    width: 48px;
+    height: 48px;
+
+    svg {
+      width: 12px;
+      height: 18px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      .arrow {
+        stroke: orange;
+        width: 11px;
+        height: 11px;
+      }
+
+      svg {
+        width: 12px;
+        height: 18px;
+      }
+    }
+  }
+
+  .left-arrow {
+    left: 0rem;
+  }
+  .right-arrow {
+    right: 0rem;
+  }
+
+  .close {
+    display: block;
+    margin-left: auto;
+    margin-right: 2rem;
+    margin-block: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    path {
+      // stroke: rgb(255, 68, 0);
+      // fill: rgb(255, 47, 0);
+      fill: color(nt-white);
+    }
+
+    &:hover,
+    &:focus-visible {
+      path {
+        fill: color(pr-orange);
+      }
+    }
+  }
+
+  .gallery-controle {
+    margin-block: 2rem;
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      display: flex;
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 0;
+
+      &:hover,
+      &:focus-visible {
+        background: white;
+        border-radius: 22px;
+        outline: none;
+        img {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .active {
+      background: white;
+      padding: 0;
+      border-radius: 22px;
+      border: 2px solid color(pr-orange);
+      img {
+        opacity: 0.5;
+      }
+    }
+
+    img {
+      width: 88px;
+      border-radius: 20px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    padding: 1rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  .gallery-controle {
+    display: none !important;
+  }
+
+  .right-arrow,
+  .left-arrow {
+    top: 45% !important;
+    width: 40px !important;
+    height: 40px !important;
+
+    svg {
+      width: 9px !important;
+      height: 14px !important;
+    }
+  }
+}

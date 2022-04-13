@@ -1,0 +1,128 @@
+@use "../../sass/abstract/index" as *;
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  //   justify-content: space-between;
+  background: color(nt-white);
+  column-gap: 3.5rem;
+  padding: 1.5rem 0rem 2rem 0rem;
+  max-width: 1110px;
+  margin-inline: auto;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  margin-inline: 2rem;
+
+  h1 {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.controle {
+  margin-left: auto;
+  display: flex;
+  column-gap: 3rem;
+  button {
+    border: none;
+    border-radius: 50%;
+    background: none;
+    align-self: center;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+  }
+
+  .profile {
+    width: 54px;
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      img {
+        border: 2px solid color(pr-orange);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .cart {
+    position: relative;
+    width: 1.5rem;
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      .cart-svg {
+        font-weight: 600;
+        fill: black;
+      }
+    }
+    .amount {
+      position: absolute;
+      background: color(pr-orange);
+      color: color(nt-light-grayish-blue);
+      font-size: 0.7rem;
+      top: -7px;
+      right: -7px;
+      border-radius: 7px;
+      padding: 0rem 0.4rem;
+    }
+
+    .hide {
+      visibility: hidden;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    margin: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    margin: auto;
+    padding: 1rem;
+    column-gap: 1.5rem;
+    h1 {
+      order: 2;
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .navbar {
+      order: 1;
+    }
+
+    .controle {
+      order: 3;
+      column-gap: 1.5rem;
+
+      .profile {
+        width: 2.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 468px) {
+  .header {
+    padding: 1rem;
+    border: none;
+    column-gap: 1rem;
+
+    .controle {
+      column-gap: 1rem;
+
+      .profile {
+        width: 2.25rem;
+      }
+    }
+  }
+}

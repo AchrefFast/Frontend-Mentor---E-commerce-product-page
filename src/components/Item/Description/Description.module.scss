@@ -1,0 +1,97 @@
+@use "../../../sass/abstract/index" as *;
+
+.description {
+  text-align: left;
+  margin-top: 3.5rem;
+  padding-inline: 2rem;
+  margin: auto;
+  margin-top: 1.5rem;
+}
+
+.company-name {
+  color: color(pr-orange);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+}
+
+.text {
+  line-height: 1.75;
+  color: color(nt-dark-grayish-blue);
+}
+
+.title {
+  line-height: 1.1;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  color: color(nt-very-dark-blue);
+}
+
+.price-box {
+  margin-block: 1.5rem;
+  display: flex;
+  max-width: 320px;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: 420px) {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.5rem;
+  }
+
+  .price {
+    font-weight: 600;
+    font-size: 1.85rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: color(nt-very-dark-blue);
+
+    span {
+      margin: 0;
+      margin-left: 1rem;
+      font-size: 1rem;
+      background: color(pr-pale-orange);
+      color: color(pr-orange);
+      padding: 0.2em 0.5em;
+      border-radius: 5px;
+    }
+  }
+
+  .old-price {
+    font-weight: 700;
+    color: color(nt-grayish-blue);
+    margin: 0;
+  }
+}
+
+@media (min-width: 540px) {
+  .description {
+    padding-inline: 3rem;
+    margin-top: 3.75rem;
+  }
+  .title {
+    font-size: 700;
+    font-size: 2.725rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .description {
+    max-width: 668px;
+    margin: 3.75rem auto 0rem 0rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .description {
+    padding: 0;
+    max-width: 445px;
+    margin-inline: 0;
+  }
+}

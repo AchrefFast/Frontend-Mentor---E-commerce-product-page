@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  // padding: 1rem 1.5rem;
+}
+
+.main {
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 540px) {
+  .main {
+    margin-top: 5.625rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .App {
+    // padding: 1rem 1.5rem;
+  }
+
+  .main {
+    margin: auto;
+    margin-top: 5.625rem;
+    max-width: 1110px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main {
+    column-gap: 8rem;
+  }
+}
